@@ -185,10 +185,10 @@ function ProjectsPanel() {
 /* ── Education Panel ── */
 function EducationPanel() {
   const timeline = [
-    { period: "2024 - Present", school: "National Christian Life College", level: "TVL - ICT", location: "Marikina City" },
-    { period: "2021 - 2024", school: "Concepcion Integrated School", level: "Secondary", location: "Marikina City" },
-    { period: "2019 - 2021", school: "Saint Joseph Montessori ISFI", level: "Primary", location: "San Mateo, Rizal" },
-    { period: "2015 - 2019", school: "Saint Joan Of Arc Academy", level: "Primary", location: "San Mateo, Rizal" },
+    { period: "2024 - Present", school: "National Christian Life College", level: "TVL - ICT", location: "Philippines" },
+    { period: "2021 - 2024", school: "Concepcion Integrated School", level: "Secondary", location: "Philippines" },
+    { period: "2019 - 2021", school: "Saint Joseph Montessori ISFI", level: "Primary", location: "Philippines" },
+    { period: "2015 - 2019", school: "Saint Joan Of Arc Academy", level: "Primary", location: "Philippines" },
   ];
 
   return (
@@ -267,7 +267,7 @@ function ContactPanel() {
         {[
           { label: "Name", value: "Jhon Rich T. Alzado" },
           { label: "Age", value: "18 years old" },
-          { label: "Location", value: "San Mateo, Rizal" },
+          { label: "Location", value: "Philippines" },
           { label: "Focus", value: "TVL - ICT" },
         ].map((item) => (
           <div key={item.label} className="p-2 rounded-lg bg-white/5 text-center">
@@ -391,8 +391,8 @@ export default function HUD() {
         </motion.div>
       </div>
 
-        {/* Minimap */}
-        <Minimap />
+      {/* Minimap */}
+      <Minimap />
 
       {/* Zone panel */}
       <AnimatePresence>

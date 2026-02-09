@@ -931,7 +931,6 @@ export default function Home() {
 
   useEffect(() => {
     setMounted(true);
-    setIs3D(true);
   }, []);
 
   return (
