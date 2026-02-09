@@ -1,0 +1,1479 @@
+2026-02-09T11:32:21.714Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="/Desktop/t...">
+                      <SegmentTrieNode>
+                      <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                        <Home params={Promise} searchParams={Promise}>
+                          <div className="noise-over...">
+                            <CursorGlow>
+                            <Navbar>
+                              <motion.nav initial={{y:-100}} animate={{y:0}} transition={{duration:0.6, ...}} ...>
+                                <nav
+                                  className={"fixed top-0 left-0 right-0 z-50 transition-all duration-500 "}
+                                  style={{transform:"translateY..."}}
+                                  ref={function useMotionRef.useCallback}
+-                                 data-orchid-ref="ref-w3d5o9tbfz"
+                                >
+                                  <div
+                                    className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4"
+-                                   data-orchid-ref="ref-46wr3axnay"
+                                  >
+                                    <a
+                                      href="#"
+                                      className="text-xl font-bold tracking-tight"
+-                                     data-orchid-ref="ref-bchlr0wr17"
+                                    >
+                                      <span
+                                        className="text-accent"
+-                                       data-orchid-ref="ref-fopkjrn8ol"
+                                      >
++                                       JR
+                                      <span
+                                        className="text-foreground/60"
+-                                       data-orchid-ref="ref-vqb70wlyuy"
+                                      >
++                                       .
+                                    <div
+                                      className="hidden md:flex items-center gap-1"
+-                                     data-orchid-ref="ref-nto63b4gmp"
+                                    >
+                                      <a
+                                        href="#about"
+                                        className="relative px-4 py-2 text-sm font-medium transition-colors text-foreg..."
+-                                       data-orchid-ref="ref-m7y7dj4nv9"
+                                      >
+                                        <span
+                                          className=... [truncated]
+2026-02-09T11:32:21.749Z [console][error] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+2026-02-09T11:37:25.196Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/#skills" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="/Desktop/t...">
+                      <SegmentTrieNode>
+                      <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                        <Home params={Promise} searchParams={Promise}>
+                          <div className="noise-over...">
+                            <CursorGlow>
+                            <Navbar>
+                            <Hero>
+                              <section
+                                ref={{current:null}}
+                                className="relative min-h-screen flex items-center justify-center overflow-hidden"
+-                               data-orchid-ref="ref-kh1l7uscrk"
+                              >
+                                <div
+                                  className="absolute inset-0 overflow-hidden"
+-                                 data-orchid-ref="ref-uxpti26c6e"
+                                >
+                                  <div
+                                    className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full ..."
+-                                   data-orchid-ref="ref-fjh46yr2xr"
+                                  >
+                                  <div
+                                    className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-purple-500/5 round..."
+-                                   data-orchid-ref="ref-jpmcbrmwaq"
+                                  >
+                                <motion.div style={{y:{...}, ...}} className="relative z...">
+                                  <div
+                                    className="relative z-10 text-center px-6 max-w-4xl"
+                                    style={{opacity:1,transform:"none"}}
+                                    ref={function useMotionRef.useCallback}
+-                                   data-orchid-ref="ref-vfry6ukmmq"
+                                  >
+                                    <motion.div initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} ...>
+                                      <div
+                                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border..."
+                                        style={{opacity:0,transform:"translateY..."}}
+                                        ref={function useMotionRef.useCallback}
+-                                       data-orchid-ref="ref-5g5jqmv282"
+                                      >
+                                        <span
+                                          className="relative fle... [truncated]
+2026-02-09T11:37:25.212Z [console][error] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+2026-02-09T11:42:23.349Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/#skills" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="/Desktop/t...">
+                      <SegmentTrieNode>
+                      <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                        <Home params={Promise} searchParams={Promise}>
+                          <div className="noise-over...">
+                            <CursorGlow>
+                            <Navbar>
+                            <Hero>
+                              <section
+                                ref={{current:null}}
+                                className="relative min-h-screen flex items-center justify-center overflow-hidden"
+-                               data-orchid-ref="ref-wjnzs38lwy"
+                              >
+                                <div
+                                  className="absolute inset-0 overflow-hidden"
+-                                 data-orchid-ref="ref-ivnf8hpm6q"
+                                >
+                                  <div
+                                    className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full ..."
+-                                   data-orchid-ref="ref-80lco6sflj"
+                                  >
+                                  <div
+                                    className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-purple-500/5 round..."
+-                                   data-orchid-ref="ref-x44whhbclb"
+                                  >
+                                <motion.div style={{y:{...}, ...}} className="relative z...">
+                                  <div
+                                    className="relative z-10 text-center px-6 max-w-4xl"
+                                    style={{opacity:1,transform:"none"}}
+                                    ref={function useMotionRef.useCallback}
+-                                   data-orchid-ref="ref-u1b2j81bjb"
+                                  >
+                                    <motion.div initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} ...>
+                                      <div
+                                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border..."
+                                        style={{opacity:0,transform:"translateY..."}}
+                                        ref={function useMotionRef.useCallback}
+-                                       data-orchid-ref="ref-ieoakaixr9"
+                                      >
+                                        <span
+                                          className="relative fle... [truncated]
+2026-02-09T11:42:23.361Z [console][error] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+2026-02-09T11:42:23.350Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/#skills" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="/Desktop/t...">
+                      <SegmentTrieNode>
+                      <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                        <Home params={Promise} searchParams={Promise}>
+                          <div className="noise-over...">
+                            <CursorGlow>
+                            <Navbar>
+                            <Hero>
+                              <section
+                                ref={{current:null}}
+                                className="relative min-h-screen flex items-center justify-center ove...
+2026-02-09T11:37:25.196Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/#skills" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="/Desktop/t...">
+                      <SegmentTrieNode>
+                      <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                        <Home params={Promise} searchParams={Promise}>
+                          <div className="noise-over...">
+                            <CursorGlow>
+                            <Navbar>
+                            <Hero>
+                              <section
+                                ref={{current:null}}
+                                className="relative min-h-screen flex items-center justify-center overflow-hidden"
+-                               data-orchid-ref="ref-kh1l7uscrk"
+                              >
+                                <div
+                                  className="absolute inset-0 overflow-hidden"
+-                                 data-orchid-ref="ref-uxpti26c6e"
+                                >
+                                  <div
+                                    className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full ..."
+-                                   data-orchid-ref="ref-fjh46yr2xr"
+                                  >
+                                  <div
+                                    className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-purple-500/5 round..."
+-                                   data-orchid-ref="ref-jpmcbrmwaq"
+                                  >
+                                <motion.div style={{y:{...}, ...}} className="relative z...">
+                                  <div
+                                    className="relative z-10 text-center px-6 max-w-4xl"
+                                    style={{opacity:1,transform:"none"}}
+                                    ref={function useMotionRef.useCallback}
+-                                   data-orchid-ref="ref-vfry6ukmmq"
+                                  >
+                                    <motion.div initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} ...>
+                                      <div
+                                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border..."
+                                        style={{opacity:0,transform:"translateY..."}}
+                                        ref={function useMotionRef.useCallback}
+-                                       data-orchid-ref="ref-5g5jqmv282"
+                                      >
+                                        <span
+                                          className="relative fle... [truncated]
+2026-02-09T11:37:25.212Z [console][error] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+2026-02-09T11:42:23.349Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/#skills" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="/Desktop/t...">
+                      <SegmentTrieNode>
+                      <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                        <Home params={Promise} searchParams={Promise}>
+                          <div className="noise-over...">
+                            <CursorGlow>
+                            <Navbar>
+                            <Hero>
+                              <section
+                                ref={{current:null}}
+                                className="relative min-h-screen flex items-center justify-center overflow-hidden"
+-                               data-orchid-ref="ref-wjnzs38lwy"
+                              >
+                                <div
+                                  className="absolute inset-0 overflow-hidden"
+-                                 data-orchid-ref="ref-ivnf8hpm6q"
+                                >
+                                  <div
+                                    className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full ..."
+-                                   data-orchid-ref="ref-80lco6sflj"
+                                  >
+                                  <div
+                                    className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-purple-500/5 round..."
+-                                   data-orchid-ref="ref-x44whhbclb"
+                                  >
+                                <motion.div style={{y:{...}, ...}} className="relative z...">
+                                  <div
+                                    className="relative z-10 text-center px-6 max-w-4xl"
+                                    style={{opacity:1,transform:"none"}}
+                                    ref={function useMotionRef.useCallback}
+-                                   data-orchid-ref="ref-u1b2j81bjb"
+                                  >
+                                    <motion.div initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} ...>
+                                      <div
+                                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border..."
+                                        style={{opacity:0,transform:"translateY..."}}
+                                        ref={function useMotionRef.useCallback}
+-                                       data-orchid-ref="ref-ieoakaixr9"
+                                      >
+                                        <span
+                                          className="relative fle... [truncated]
+2026-02-09T11:42:23.361Z [console][error] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+2026-02-09T11:42:23.350Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/#skills" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="/Desktop/t...">
+                      <SegmentTrieNode>
+                      <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                        <Home params={Promise} searchParams={Promise}>
+                          <div className="noise-over...">
+                            <CursorGlow>
+                            <Navbar>
+                            <Hero>
+                              <section
+                                ref={{current:null}}
+                                className="relative min-h-screen flex items-center justify-center ove...
+2026-02-09T11:56:12.232Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <PopChild pop={false} isPresent={true} anchorX="left" anchorY="top" root={undefined}>
+      <PopChildMeasure isPresent={true} childRef={{current:null}} sizeRef={{...}} pop={false}>
+        <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{duration:0.5}}>
+          <div style={{opacity:0}} ref={function useMotionRef.useCallback}>
+            <Suspense fallback={<div>}>
+              <World>
+                <div className="fixed inse...">
+                  <Suspense fallback={<LoadingScreen>}>
+                    <Canvas shadows={true} camera={{position:[...], ...}} gl={{antialias:true, ...}} ...>
+                      <m>
+                        <CanvasImpl shadows={true} camera={{position:[...], ...}} gl={{antialias:true, ...}} ...>
+                          <div
+                            ref={{current:null}}
+                            style={{position:"relative",width:"100%",height:"100%",overflow:"hidden",pointerEvents:"auto"}}
+-                           data-orchid-ref="ref-fc2c5sslx8"
+                          >
+                            <div
+                              ref={function L}
+                              style={{width:"100%",height:"100%"}}
+-                             data-orchid-ref="ref-tldbnb9kcq"
+                            >
+                              <canvas
+                                ref={{current:null}}
+                                style={{display:"block"}}
+-                               data-orchid-ref="ref-ga79uxwr47"
+                              >
+                  ...
+
+2026-02-09T11:56:12.594Z [console][warn] [Fast Refresh] done in 862ms
+2026-02-09T11:56:13.442Z [console][log] unsupported GPOS table LookupType 8 format 2
+2026-02-09T11:56:13.443Z [console][log] unsupported GPOS table LookupType 5 format 1
+2026-02-09T11:56:13.447Z [console][log] unsupported GSUB table LookupType 6 format 2
+2026-02-09T11:56:13.448Z [console][log] unsupported GSUB table LookupType 6 format 1
+2026-02-09T11:56:15.965Z [console][log] unsupported GPOS table LookupType 8 format 2
+2026-02-09T11:56:15.965Z [console][log] unsupported GPOS table LookupType 5 format 1
+2026-02-09T11:56:15.965Z [console][log] unsupported GSUB table LookupType 6 format 2
+2026-02-09T11:56:15.965Z [console][log] unsupported GSUB table LookupType 6 format 1
+2026-02-09T11:56:11.651Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RedirectBoundary>
+      <RedirectErrorBoundary router={{...}}>
+        <InnerLayoutRouter url="/#skills" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+          <SegmentViewNode type="page" pagePath="/Desktop/t...">
+            <SegmentTrieNode>
+            <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+              <Home params={Promise} searchParams={Promise}>
+                <ModeToggle>
+                <AnimatePresence mode="wait">
+                  <PresenceChild isPresent={true} initial={undefined} custom={undefined} presenceAffectsLayout={true} ...>
+                    <PopChild pop={false} isPresent={true} anchorX="left" anchorY="top" root={undefined}>
+                      <PopChildMeasure isPresent={true} childRef={{current:null}} sizeRef={{...}} pop={false}>
+                        <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} ...>
+                          <div
+                            style={{opacity:0}}
+                            ref={function useMotionRef.useCallback}
+-                           data-orchid-ref="ref-36spi49ary"
+                          >
+          ...
+        ...
+
+2026-02-09T11:56:11.839Z [console][log] [Fast Refresh] rebuilding
+2026-02-09T11:56:12.203Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <SegmentViewNode type="page" pagePath="/Desktop/t...">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+        <Home params={Promise} searchParams={Promise}>
+          <ModeToggle>
+          <AnimatePresence mode="wait">
+            <PresenceChild isPresent={true} initial={undefined} custom={undefined} presenceAffectsLayout={true} ...>
+              <PopChild pop={false} isPresent={true} anchorX="left" anchorY="top" root={undefined}>
+                <PopChildMeasure isPresent={true} childRef={{current:null}} sizeRef={{...}} pop={false}>
+                  <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{duration:0.5}}>
+                    <div style={{opacity:0}} ref={function useMotionRef.useCallback}>
+                      <Suspense fallback={<div>}>
+                        <World>
+                          <div
+                            className="fixed inset-0 bg-[#050505]"
+-                           data-orchid-ref="ref-dd99wxltw3"
+                          >
+                            <Suspense>
+                            <HUD>
+                              <div
+                                className="fixed bottom-6 left-6 z-50 pointer-events-none"
+-                               data-orc...
+2026-02-09T11:56:12.232Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <PopChild pop={false} isPresent={true} anchorX="left" anchorY="top" root={undefined}>
+      <PopChildMeasure isPresent={true} childRef={{current:null}} sizeRef={{...}} pop={false}>
+        <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{duration:0.5}}>
+          <div style={{opacity:0}} ref={function useMotionRef.useCallback}>
+            <Suspense fallback={<div>}>
+              <World>
+                <div className="fixed inse...">
+                  <Suspense fallback={<LoadingScreen>}>
+                    <Canvas shadows={true} camera={{position:[...], ...}} gl={{antialias:true, ...}} ...>
+                      <m>
+                        <CanvasImpl shadows={true} camera={{position:[...], ...}} gl={{antialias:true, ...}} ...>
+                          <div
+                            ref={{current:null}}
+                            style={{position:"relative",width:"100%",height:"100%",overflow:"hidden",pointerEvents:"auto"}}
+-                           data-orchid-ref="ref-fc2c5sslx8"
+                          >
+                            <div
+                              ref={function L}
+                              style={{width:"100%",height:"100%"}}
+-                             data-orchid-ref="ref-tldbnb9kcq"
+                            >...
+2026-02-09T11:56:12.593Z [console][log] [Fast Refresh] done in 862ms
+2026-02-09T11:56:12.254Z [network][POST 200] /__nextjs_original-stack-frames
+  request: {"frames":[{"file":"https://react.dev/link/hydration-mismatch","line1":null,"column1":null,"methodName":"<unknown>","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_c0fa33e6._.js","line1":2199,"column1":71,"methodName":"createConsoleError","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_c0fa33e6._.js","line1":2980,"column1":54,"methodName":"handleConsoleError","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_c0fa33e6._.js","line1":3124,"column1":57,"methodName":"console.error","arguments":[]},{"file":"<anonymous>","line1":86,"column1":44,"methodName":"console.error","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_compiled_react-dom_9824cedb._.js","line1":3469,"column1":25,"methodName":"<unknown>","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_compiled_react-dom_9824cedb._.js","line1":965,"column1":74,"methodName":"runWithFiberInDEV","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_compiled_react-dom_9824cedb._.js","line1":3468,"column1":13,"methodName":"emitPendingHydrationWarnings","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_compiled_react-dom_9824cedb._.js","line1":6897,"column1":102,"methodName":"completeWork","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_compiled_react-dom_9824cedb._.js","line1":965,"column1":131,"methodName":"runWithFiberInDEV","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_compiled_react-dom_9824cedb._.js","line1":9627,"column1":23,"methodName":"completeUnitOfWork","arguments":[]},{... [truncated]
+  response: [{"status":"rejected","reason":"[Error: Unknown url scheme 'https'\n\nDebug info:\n- Execution of project_trace_source_operation failed\n- Execution of *SourceMap::new_from_rope_cached failed\n- Execution of get_source_map_rope failed\n- Unknown url scheme 'https'] {\n  code: 'GenericFailure'\n}"},{"status":"fulfilled","value":{"originalStackFrame":{"arguments":[],"file":"node_modules/next/src/next-devtools/shared/console-error.ts","line1":16,"column1":35,"ignored":true,"methodName":"createConsoleError"},"originalCodeFrame":null}},{"status":"fulfilled","value":{"originalStackFrame":{"arguments":[],"file":"node_modules/next/src/next-devtools/userspace/app/errors/use-error-handler.ts","line1":31,"column1":31,"ignored":true,"methodName":"handleConsoleError"},"originalCodeFrame":null}},{"status":"fulfilled","value":{"originalStackFrame":{"arguments":[],"file":"node_modules/next/src/next-devtools/userspace/app/errors/intercept-console-error.ts","line1":33,"column1":27,"ignored":true,"methodName":"console.error"},"originalCodeFrame":null}},{"status":"fulfilled","value":{"originalStackFrame":{"arguments":[],"file":"<anonymous>","line1":86,"column1":44,"ignored":false,"methodName":"console.error"},"originalCodeFrame":null}},{"status":"fulfilled","value":{"originalStackFrame":{"arguments":[],"file":"node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js","line1":5731,"column1":19,"ignored":true,"methodName":"<unknown>"},"originalCodeFrame":null}},{"status":"fulfilled","value":{"originalStackFrame":{"arguments":[],"file":"node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js","line1":986,"column1":30,"ignored":true,"methodName":"runWithFiberInDEV"},"originalCodeFrame":null}},{"status":"fulfilled","value":{"originalStackFrame":{"arguments":[],"file":"node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js","line1":5730,"column1":9,"ignored":true,"methodName":"emitPendingHydrationWarnings"},"originalCodeFrame"... [truncated]
+2026-02-09T11:56:12.774Z [network][POST 200] /__nextjs_original-stack-frames
+  request: {"frames":[{"file":"https://react.dev/link/hydration-mismatch","line1":null,"column1":null,"methodName":"<unknown>","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_c0fa33e6._.js","line1":2199,"column1":71,"methodName":"createConsoleError","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_c0fa33e6._.js","line1":2980,"column1":54,"methodName":"handleConsoleError","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_c0fa33e6._.js","line1":3124,"column1":57,"methodName":"console.error","arguments":[]},{"file":"<anonymous>","line1":86,"column1":44,"methodName":"console.error","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_compiled_react-dom_9824cedb._.js","line1":3469,"column1":25,"methodName":"<unknown>","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_compiled_react-dom_9824cedb._.js","line1":965,"column1":74,"methodName":"runWithFiberInDEV","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_compiled_react-dom_9824cedb._.js","line1":3468,"column1":13,"methodName":"emitPendingHydrationWarnings","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_compiled_react-dom_9824cedb._.js","line1":7076,"column1":32,"methodName":"completeWork","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_compiled_react-dom_9824cedb._.js","line1":965,"column1":74,"methodName":"runWithFiberInDEV","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_compiled_react-dom_9824cedb._.js","line1":9627,"column1":23,"methodName":"completeUnitOfWork","arguments":[]},{"f... [truncated]
+  response: [{"status":"rejected","reason":"[Error: Unknown url scheme 'https'\n\nDebug info:\n- Execution of project_trace_source_operation failed\n- Execution of *SourceMap::new_from_rope_cached failed\n- Execution of get_source_map_rope failed\n- Unknown url scheme 'https'] {\n  code: 'GenericFailure'\n}"},{"status":"fulfilled","value":{"originalStackFrame":{"arguments":[],"file":"node_modules/next/src/next-devtools/shared/console-error.ts","line1":16,"column1":35,"ignored":true,"methodName":"createConsoleError"},"originalCodeFrame":null}},{"status":"fulfilled","value":{"originalStackFrame":{"arguments":[],"file":"node_modules/next/src/next-devtools/userspace/app/errors/use-error-handler.ts","line1":31,"column1":31,"ignored":true,"methodName":"handleConsoleError"},"originalCodeFrame":null}},{"status":"fulfilled","value":{"originalStackFrame":{"arguments":[],"file":"node_modules/next/src/next-devtools/userspace/app/errors/intercept-console-error.ts","line1":33,"column1":27,"ignored":true,"methodName":"console.error"},"originalCodeFrame":null}},{"status":"fulfilled","value":{"originalStackFrame":{"arguments":[],"file":"<anonymous>","line1":86,"column1":44,"ignored":false,"methodName":"console.error"},"originalCodeFrame":null}},{"status":"fulfilled","value":{"originalStackFrame":{"arguments":[],"file":"node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js","line1":5731,"column1":19,"ignored":true,"methodName":"<unknown>"},"originalCodeFrame":null}},{"status":"fulfilled","value":{"originalStackFrame":{"arguments":[],"file":"node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js","line1":986,"column1":30,"ignored":true,"methodName":"runWithFiberInDEV"},"originalCodeFrame":null}},{"status":"fulfilled","value":{"originalStackFrame":{"arguments":[],"file":"node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js","line1":5730,"column1":9,"ignored":true,"methodName":"emitPendingHydrationWarnings"},"originalCodeFrame"... [truncated]
+2026-02-09T11:56:12.774Z [network][POST 200] /__nextjs_original-stack-frames
+  request: {"frames":[{"file":"https://react.dev/link/hydration-mismatch","line1":null,"column1":null,"methodName":"<unknown>","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_c0fa33e6._.js","line1":2199,"column1":71,"methodName":"createConsoleError","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_c0fa33e6._.js","line1":2980,"column1":54,"methodName":"handleConsoleError","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_c0fa33e6._.js","line1":3124,"column1":57,"methodName":"console.error","arguments":[]},{"file":"<anonymous>","line1":86,"column1":44,"methodName":"console.error","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_compiled_react-dom_9824cedb._.js","line1":3469,"column1":25,"methodName":"<unknown>","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_compiled_react-dom_9824cedb._.js","line1":965,"column1":74,"methodName":"runWithFiberInDEV","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_compiled_react-dom_9824cedb._.js","line1":3468,"column1":13,"methodName":"emitPendingHydrationWarnings","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_compiled_react-dom_9824cedb._.js","line1":7076,"column1":32,"methodName":"completeWork","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_compiled_react-dom_9824cedb._.js","line1":965,"column1":74,"methodName":"runWithFiberInDEV","arguments":[]},{"file":"file://C:/Users/Kyla/Desktop/test/portfoliov2/.next/dev/static/chunks/d8eca_next_dist_compiled_react-dom_9824cedb._.js","line1":9627,"column1":23,"methodName":"completeUnitOfWork","arguments":[]},{"f... [truncated]
+  response: [{"status":"rejected","reason":"[Error: Unknown url scheme 'https'\n\nDebug info:\n- Execution of project_trace_source_operation failed\n- Execution of *SourceMap::new_from_rope_cached failed\n- Execution of get_source_map_rope failed\n- Unknown url scheme 'https'] {\n  code: 'GenericFailure'\n}"},{"status":"fulfilled","value":{"originalStackFrame":{"arguments":[],"file":"node_modules/next/src/next-devtools/shared/console-error.ts","line1":16,"column1":35,"ignored":true,"methodName":"createConsoleError"},"originalCodeFrame":null}},{"status":"fulfilled","value":{"originalStackFrame":{"arguments":[],"file":"node_modules/next/src/next-devtools/userspace/app/errors/use-error-handler.ts","line1":31,"column1":31,"ignored":true,"methodName":"handleConsoleError"},"originalCodeFrame":null}},{"status":"fulfilled","value":{"originalStackFrame":{"arguments":[],"file":"node_modules/next/src/next-devtools/userspace/app/errors/intercept-console-error.ts","line1":33,"column1":27,"ignored":true,"methodName":"console.error"},"originalCodeFrame":null}},{"status":"fulfilled","value":{"originalStackFrame":{"arguments":[],"file":"<anonymous>","line1":86,"column1":44,"ignored":false,"methodName":"console.error"},"originalCodeFrame":null}},{"status":"fulfilled","value":{"originalStackFrame":{"arguments":[],"file":"node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js","line1":5731,"column1":19,"ignored":true,"methodName":"<unknown>"},"originalCodeFrame":null}},{"status":"fulfilled","value":{"originalStackFrame":{"arguments":[],"file":"node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js","line1":986,"column1":30,"ignored":true,"methodName":"runWithFiberInDEV"},"originalCodeFrame":null}},{"status":"fulfilled","value":{"originalStackFrame":{"arguments":[],"file":"node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js","line1":5730,"column1":9,"ignored":true,"methodName":"emitPendingHydrationWarnings"},"originalCodeFrame"... [truncated]
+2026-02-09T11:56:11.650Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RedirectBoundary>
+      <RedirectErrorBoundary router={{...}}>
+        <InnerLayoutRouter url="/#skills" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+          <SegmentViewNode type="page" pagePath="/Desktop/t...">
+            <SegmentTrieNode>
+            <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+              <Home params={Promise} searchParams={Promise}>
+                <ModeToggle>
+                <AnimatePresence mode="wait">
+                  <PresenceChild isPresent={true} initial={undefined} custom={undefined} presenceAffectsLayout={true} ...>
+                    <PopChild pop={false} isPresent={true} anchorX="left" anchorY="top" root={undefined}>
+                      <PopChildMeasure isPresent={true} childRef={{current:null}} sizeRef={{...}} pop={false}>
+                        <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} ...>
+                          <div
+                            style={{opacity:0}}
+                            ref={function useMotionRef.useCallback}
+-                           data-orchid-ref="ref-36spi49ary"
+                          >
+          ...
+        ...
+
+2026-02-09T11:56:12.203Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <SegmentViewNode type="page" pagePath="/Desktop/t...">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+        <Home params={Promise} searchParams={Promise}>
+          <ModeToggle>
+          <AnimatePresence mode="wait">
+            <PresenceChild isPresent={true} initial={undefined} custom={undefined} presenceAffectsLayout={true} ...>
+              <PopChild pop={false} isPresent={true} anchorX="left" anchorY="top" root={undefined}>
+                <PopChildMeasure isPresent={true} childRef={{current:null}} sizeRef={{...}} pop={false}>
+                  <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{duration:0.5}}>
+                    <div style={{opacity:0}} ref={function useMotionRef.useCallback}>
+                      <Suspense fallback={<div>}>
+                        <World>
+                          <div
+                            className="fixed inset-0 bg-[#050505]"
+-                           data-orchid-ref="ref-dd99wxltw3"
+                          >
+                            <Suspense>
+                            <HUD>
+                              <div
+                                className="fixed bottom-6 left-6 z-50 pointer-events-none"
+-                               data-orchid-ref="ref-o0haa1tby0"
+                              >
+                                <motion.div initial={{opacity:0,y:10}} animate={{opacity:1,y:0}} ...>
+                                  <div
+                                    className="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-black/60 backdrop-blu..."
+                                    style={{opacity:0,transform:"translateY..."}}
+                                    ref={function useMotionRef.useCallback}
+-                                   data-orchid-ref="ref-0e6yffjg56"
+                                  >
+                                    <div
+                                      className="flex gap-1"
+-                                     data-orchid-ref="ref-ow8x9c6x7u"
+                                    >
+                                      <kbd
+                                        className="w-6 h-6 flex items-center justify-center rounded bg-white/10 text-[..."
+-                                       data-orchid-ref="ref-e832ehqrkv"
+                                      >
++                                       W
+                                      <div
+                                        className="flex flex-col gap-0.5"
+-                                       data-orchid-ref="ref-eew5wjzyd0"
+                                      >
+                                        <div
+-                                         data-orchid-ref="ref-aejynsm20n"
+                                        >
+                                        <div
+                                          className="flex gap-0.5"
+-                                         data-orchid-ref="ref-hv2z5hseuy"
+                                        >
+                                          <kbd
+                                            className="w-6 h-6 flex items-center justify-center rounded bg-white/10 te..."
+-                                           data-orchid-ref="ref-w35v0rd3vv"
+                ... [truncated]
+2026-02-09T11:56:12.232Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <PopChild pop={false} isPresent={true} anchorX="left" anchorY="top" root={undefined}>
+      <PopChildMeasure isPresent={true} childRef={{current:null}} sizeRef={{...}} pop={false}>
+        <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{duration:0.5}}>
+          <div style={{opacity:0}} ref={function useMotionRef.useCallback}>
+            <Suspense fallback={<div>}>
+              <World>
+                <div className="fixed inse...">
+                  <Suspense fallback={<LoadingScreen>}>
+                    <Canvas shadows={true} camera={{position:[...], ...}} gl={{antialias:true, ...}} ...>
+                      <m>
+                        <CanvasImpl shadows={true} camera={{position:[...], ...}} gl={{antialias:true, ...}} ...>
+                          <div
+                            ref={{current:null}}
+                            style={{position:"relative",width:"100%",height:"100%",overflow:"hidden",pointerEvents:"auto"}}
+-                           data-orchid-ref="ref-fc2c5sslx8"
+                          >
+                            <div
+                              ref={function L}
+                              style={{width:"100%",height:"100%"}}
+-                             data-orchid-ref="ref-tldbnb9kcq"
+                            >
+                              <canvas
+                                ref={{current:null}}
+                                style={{display:"block"}}
+-                               data-orchid-ref="ref-ga79uxwr47"
+                              >
+                  ...
+
+2026-02-09T11:56:43.388Z [console][error] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+2026-02-09T11:57:11.996Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <InnerLayoutRouter url="/#skills" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+      <SegmentViewNode type="page" pagePath="/Desktop/t...">
+        <SegmentTrieNode>
+        <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+          <Home params={Promise} searchParams={Promise}>
+            <ModeToggle>
+            <AnimatePresence mode="wait">
+              <PresenceChild isPresent={true} initial={undefined} custom={undefined} presenceAffectsLayout={true} ...>
+                <PopChild pop={false} isPresent={true} anchorX="left" anchorY="top" root={undefined}>
+                  <PopChildMeasure isPresent={true} childRef={{current:null}} sizeRef={{...}} pop={false}>
+                    <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} ...>
+                      <div className="noise-over..." style={{opacity:0}} ref={function useMotionRef.useCallback}>
+                        <CursorGlow>
+                        <Navbar>
+                          <motion.nav initial={{y:-100}} animate={{y:0}} transition={{duration:0.6, ...}} ...>
+                            <nav
+                              className={"fixed top-0 left-0 right-0 z-50 transition-all duration-500 "}
+                              style={{transform:"translateY..."}}
+                              ref={function useMotionRef.useCallback}
+-                             data-orchid-ref="ref-m4ol4359fg"
+                            >
+                              <div
+                                className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4"
+-                               data-orchid-ref="ref-pxn9h9envo"
+                              >
+                                <a
+                                  href="#"
+                                  className="text-xl font-bold tracking-tight"
+-                                 data-orchid-ref="ref-5gudcwbzsq"
+                                >
+                                  <span
+                                    className="text-accent"
+-                                   data-orchid-ref="ref-0e2pxt40l5"
+                                  >
++                                   JR
+                                  <span
+                                    className="text-foreground/60"
+-                                   data-orchid-ref="ref-cooegkuni6"
+                                  >
++                                   .
+                                <div
+                                  className="hidden md:flex items-center gap-1"
+-                                 data-orchid-ref="ref-oezf7htt6z"
+                                >
+                                  <a
+                                    href="#about"
+                                    className="relative px-4 py-2 text-sm font-medium transition-colors text-foregroun..."
+-                                   data-orchid-ref="ref-rrzv223rxu"
+                                  >
+                                    <span
+                                      className="relative z-10"
+-                                     data-orchid-ref="ref-7atpcsch0w"
+                                    >
++                                     About
+                                ... [truncated]
+2026-02-09T11:57:12.007Z [console][error] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+2026-02-09T12:02:14.844Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <InnerLayoutRouter url="/#skills" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+      <SegmentViewNode type="page" pagePath="/Desktop/t...">
+        <SegmentTrieNode>
+        <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+          <Home params={Promise} searchParams={Promise}>
+            <ModeToggle>
+            <AnimatePresence mode="wait">
+              <PresenceChild isPresent={true} initial={undefined} custom={undefined} presenceAffectsLayout={true} ...>
+                <PopChild pop={false} isPresent={true} anchorX="left" anchorY="top" root={undefined}>
+                  <PopChildMeasure isPresent={true} childRef={{current:null}} sizeRef={{...}} pop={false}>
+                    <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} ...>
+                      <div className="noise-over..." style={{opacity:0}} ref={function useMotionRef.useCallback}>
+                        <CursorGlow>
+                        ...
+                          <div className="max-w-6xl ...">
+                            <a>
+                            <div>
+                            <button onClick={function onClick} className="md:hidden ...">
+                              <motion.span>
+                              <motion.span animate={{opacity:1}} className="block w-5 ...">
+                                <span
+                                  className="block w-5 h-[2px] bg-foreground"
+                                  style={{}}
+                                  ref={function useMotionRef.useCallback}
+-                                 data-orchid-ref="ref-4ww3nq78g8"
+                                >
+                              <motion.span animate={{rotate:0,y:0}} className="block w-5 ...">
+                                <span
+                                  className="block w-5 h-[2px] bg-foreground"
+                                  style={{}}
+                                  ref={function useMotionRef.useCallback}
+-                                 data-orchid-ref="ref-yoc67j2sfc"
+                                >
+                        <Hero>
+                          <section
+                            ref={{current:null}}
+                            className="relative min-h-screen flex items-center justify-center overflow-hidden"
+-                           data-orchid-ref="ref-v7y1ch7ovm"
+                          >
+                            <div
+                              className="absolute inset-0 overflow-hidden"
+-                             data-orchid-ref="ref-7832988y7a"
+                            >
+                              <div
+                                className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur..."
+-                               data-orchid-ref="ref-kyrchh1mcj"
+                              >
+                              <div
+                                className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-purple-500/5 rounded-f..."
+-                               data-orchid-ref="ref-8kauok3g21"
+                              >
+                            <motion.div style={{y:{...}, ...}} className="relative z...">
+                              <div
+                             ... [truncated]
+2026-02-09T12:02:14.959Z [console][error] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+2026-02-09T12:02:18.121Z [console][error] Uncaught ChunkLoadError: Failed to load chunk /_next/static/chunks/d8eca_three_build_three_module_4c07928e.js from module [project]/Desktop/test/portfoliov2/src/components/world/World.tsx [app-client] (ecmascript, async loader)
+2026-02-09T12:04:27.639Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RedirectBoundary>
+      <RedirectErrorBoundary router={{...}}>
+        <InnerLayoutRouter url="/#skills" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+          <SegmentViewNode type="page" pagePath="/Desktop/t...">
+            <SegmentTrieNode>
+            <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+              <Home params={Promise} searchParams={Promise}>
+                <ModeToggle>
+                <AnimatePresence mode="wait">
+                  <PresenceChild isPresent={true} initial={undefined} custom={undefined} presenceAffectsLayout={true} ...>
+                    <PopChild pop={false} isPresent={true} anchorX="left" anchorY="top" root={undefined}>
+                      <PopChildMeasure isPresent={true} childRef={{current:null}} sizeRef={{...}} pop={false}>
+                        <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} ...>
+                          <div
+                            className="noise-overlay grid-bg min-h-screen"
+                            style={{opacity:0}}
+                            ref={function useMotionRef.useCallback}
+-                           data-orchid-ref="ref-id0neyix4i"
+                          >
+                            <CursorGlow>
+                              <div
+                                className="cursor-glow hidden md:block"
+                                style={{left:-500,top:-500}}
+-                               data-orchid-ref="ref-1fsxm4lvqv"
+                              >
+                            <Navbar>
+                              <motion.nav initial={{y:-100}} animate={{y:0}} transition={{duration:0.6, ...}} ...>
+                                <nav
+                                  className={"fixed top-0 left-0 right-0 z-50 transition-all duration-500 "}
+                                  style={{transform:"translateY..."}}
+                                  ref={function useMotionRef.useCallback}
+-                                 data-orchid-ref="ref-z2jix3xrn4"
+                                >
+                                  <div
+                                    className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4"
+-                                   data-orchid-ref="ref-px1kay7jxq"
+                                  >
+                                    <a
+                                      href="#"
+                                      className="text-xl font-bold tracking-tight"
+-                                     data-orchid-ref="ref-0bd7ihmmgk"
+                                    >
+                                      <span
+                                        className="text-accent"
+-                                       data-orchid-ref="ref-zr45i58giu"
+                                      >
++                                       JR
+                                      <span
+                                        className="text-foreground/60"
+-                                       data-orchid-ref="ref-fqno101gpf"
+                                      >
++                                       .
+                                    <div
+                                      className="hidden md:flex items-center gap-1"
+-            ... [truncated]
+2026-02-09T12:04:27.641Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RedirectBoundary>
+      <RedirectErrorBoundary router={{...}}>
+        <InnerLayoutRouter url="/#skills" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+          <SegmentViewNode type="page" pagePath="/Desktop/t...">
+            <SegmentTrieNode>
+            <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+              <Home params={Promise} searchParams={Promise}>
+                <ModeToggle>
+                <AnimatePresence mode="wait">
+                  <PresenceChild isPresent={true} initial={undefined} custom={undefined} presenceAffectsLayout={true} ...>
+                    <PopChild pop={false} isPresent={true} anchorX="left" anchorY="top" root={undefined}>
+                      <PopChildMeasure isPresent={true} childRef={{current:null}} sizeRef={{...}} pop={false}>
+                        <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} ...>
+                          <div
+                            className="noise-overlay grid-bg min-h-screen"
+                            style={{opacity:0}}
+                            ref={function useMotionRef.useCallback}
+-                           data-orchid-ref="ref-id0neyix4i"
+                          >
+                            <CursorGlow>
+            ...
+2026-02-09T12:06:59.859Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{rsc:<Fragment>, ...}}>
+                    <__next_viewport_boundary__>
+                    <MetadataWrapper>
+                      <div
+                        hidden={true}
+-                       data-orchid-ref="ref-a8lsk0h358"
+                      >
+                    ...
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="/Desktop/t...">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+                            className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
+-                           data-orchid-ref="ref-e0n8zgboq6"
+                          >
+                            ...
+                              <Home params={Promise} searchParams={Promise}>
+                                <ModeToggle is3D={false} onToggle={function onToggle}>
+                                  <motion.button initial={{opacity:0, ...}} animate={{opacity:1,scale:1}} ...>
+                                    <button
+                                      onClick={function onToggle}
+                                      className="fixed bottom-6 right-6 z-[60] flex items-center gap-2 px-4 py-2.5 rou..."
+                                      style={{opacity:0,transform:"scale(0.9)"}}
+                                      ref={function useMotionRef.useCallback}
+-                                     data-orchid-ref="ref-xnhc3ua65e"
+                                    >
+                                      <span
+                                        className="text-xs text-white/50 group-hover:text-white/70 transition-colors"
+-                                       data-orchid-ref="ref-8bs76xqtut"
+                                      >
++                                       3D World
+                                      <div
+                                        className="relative w-10 h-5 rounded-full bg-white/10 transition-colors"
+-                                       data-orchid-ref="ref-udqh3vme7r"
+                                      >
+                                        <motion.div animate={{x:0}} transition={{type:"spring", ...}} ...>
+                                          <div
+                                            className="absolute top-0.5 left-0.5 w-4 h-4 rounded-full bg-accent"
+                                            style={{}}
+                                            ref={function useMotionRef.useCallback}
+-                                           data-orchid-ref="ref-lljlre5n8d"
+                                          >
+           ... [truncated]
+2026-02-09T12:06:59.876Z [console][error] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+2026-02-09T12:09:28.459Z [console][error] Uncaught ReferenceError: Minimap is not defined
+2026-02-09T12:09:43.972Z [console][error] [Fast Refresh] performing full reload because your application had an unrecoverable error
+2026-02-09T12:06:59.859Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{rsc:<Fragment>, ...}}>
+                    <__next_viewport_boundary__>
+                    <MetadataWrapper>
+                      <div
+                        hidden={true}
+-                       data-orchid-ref="ref-a8lsk0h358"
+                      >
+                    ...
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="/Desktop/t...">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+                            className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
+-                           ...
+2026-02-09T12:06:59.859Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{rsc:<Fragment>, ...}}>
+                    <__next_viewport_boundary__>
+                    <MetadataWrapper>
+                      <div
+                        hidden={true}
+-                       data-orchid-ref="ref-a8lsk0h358"
+                      >
+                    ...
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="/Desktop/t...">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+                            className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
+-                           data-orchid-ref="ref-e0n8zgboq6"
+                          >
+                            ...
+                              <Home params={Promise} searchParams={Promise}>
+                                <ModeToggle is3D={false} onToggle={function onToggle}>
+                                  <motion.button initial={{opacity:0, ...}} animate={{opacity:1,scale:1}} ...>
+                                    <button
+                                      onClick={function onToggle}
+                                      className="fixed bottom-6 right-6 z-[60] flex items-center gap-2 px-4 py-2.5 rou..."
+                                      style={{opacity:0,transform:"scale(0.9)"}}
+                                      ref={function useMotionRef.useCallback}
+-                                     data-orchid-ref="ref-xnhc3ua65e"
+                                    >
+                                      <span
+                                        className="text-xs text-white/50 group-hover:text-white/70 transition-colors"
+-                                       data-orchid-ref="ref-8bs76xqtut"
+                                      >
++                                       3D World
+                                      <div
+                                        className="relative w-10 h-5 rounded-full bg-white/10 transition-colors"
+-                                       data-orchid-ref="ref-udqh3vme7r"
+                                      >
+                                        <motion.div animate={{x:0}} transition={{type:"spring", ...}} ...>
+                                          <div
+                                            className="absolute top-0.5 left-0.5 w-4 h-4 rounded-full bg-accent"
+                                            style={{}}
+                                            ref={function useMotionRef.useCallback}
+-                                           data-orchid-ref="ref-lljlre5n8d"
+                                          >
+           ... [truncated]
+2026-02-09T12:06:59.876Z [console][error] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+2026-02-09T12:09:28.459Z [console][error] Uncaught ReferenceError: Minimap is not defined
+2026-02-09T12:09:43.972Z [console][error] [Fast Refresh] performing full reload because your application had an unrecoverable error
+2026-02-09T12:06:59.859Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{rsc:<Fragment>, ...}}>
+                    <__next_viewport_boundary__>
+                    <MetadataWrapper>
+                      <div
+                        hidden={true}
+-                       data-orchid-ref="ref-a8lsk0h358"
+                      >
+                    ...
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="/Desktop/t...">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+                            className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
+-                           ...
+2026-02-09T12:06:59.859Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{rsc:<Fragment>, ...}}>
+                    <__next_viewport_boundary__>
+                    <MetadataWrapper>
+                      <div
+                        hidden={true}
+-                       data-orchid-ref="ref-a8lsk0h358"
+                      >
+                    ...
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="/Desktop/t...">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+                            className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
+-                           data-orchid-ref="ref-e0n8zgboq6"
+                          >
+                            ...
+                              <Home params={Promise} searchParams={Promise}>
+                                <ModeToggle is3D={false} onToggle={function onToggle}>
+                                  <motion.button initial={{opacity:0, ...}} animate={{opacity:1,scale:1}} ...>
+                                    <button
+                                      onClick={function onToggle}
+                                      className="fixed bottom-6 right-6 z-[60] flex items-center gap-2 px-4 py-2.5 rou..."
+                                      style={{opacity:0,transform:"scale(0.9)"}}
+                                      ref={function useMotionRef.useCallback}
+-                                     data-orchid-ref="ref-xnhc3ua65e"
+                                    >
+                                      <span
+                                        className="text-xs text-white/50 group-hover:text-white/70 transition-colors"
+-                                       data-orchid-ref="ref-8bs76xqtut"
+                                      >
++                                       3D World
+                                      <div
+                                        className="relative w-10 h-5 rounded-full bg-white/10 transition-colors"
+-                                       data-orchid-ref="ref-udqh3vme7r"
+                                      >
+                                        <motion.div animate={{x:0}} transition={{type:"spring", ...}} ...>
+                                          <div
+                                            className="absolute top-0.5 left-0.5 w-4 h-4 rounded-full bg-accent"
+                                            style={{}}
+                                            ref={function useMotionRef.useCallback}
+-                                           data-orchid-ref="ref-lljlre5n8d"
+                                          >
+           ... [truncated]
+2026-02-09T12:06:59.876Z [console][error] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+2026-02-09T12:09:28.459Z [console][error] Uncaught ReferenceError: Minimap is not defined
+2026-02-09T12:09:43.972Z [console][error] [Fast Refresh] performing full reload because your application had an unrecoverable error
+2026-02-09T12:10:26.727Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+      <LoadingBoundary name="/" loading={null}>
+        <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+          <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+            <RedirectBoundary>
+              <RedirectErrorBoundary router={{...}}>
+                <InnerLayoutRouter url="/#skills" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                  <SegmentViewNode type="page" pagePath="/Desktop/t...">
+                    <SegmentTrieNode>
+                    <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                      <Home params={Promise} searchParams={Promise}>
+                        <ModeToggle is3D={false} onToggle={function onToggle}>
+                          <motion.button initial={{opacity:0, ...}} animate={{opacity:1,scale:1}} transition={{delay:1}} ...>
+                            <button
+                              onClick={function onToggle}
+                              className="fixed bottom-6 right-6 z-[60] flex items-center gap-2 px-4 py-2.5 rounded-ful..."
+                              style={{opacity:0,transform:"scale(0.9)"}}
+                              ref={function useMotionRef.useCallback}
+-                             data-orchid-ref="ref-pn5ts60ii1"
+                            >
+                              <span
+                                className="text-xs text-white/50 group-hover:text-white/70 transition-colors"
+-                               data-orchid-ref="ref-99y57dsy9x"
+                              >
++                               3D World
+                              <div
+                                className="relative w-10 h-5 rounded-full bg-white/10 transition-colors"
+-                               data-orchid-ref="ref-xfzokjxpuy"
+                              >
+                                <motion.div animate={{x:0}} transition={{type:"spring", ...}} className="absolute t...">
+                                  <div
+                                    className="absolute top-0.5 left-0.5 w-4 h-4 rounded-full bg-accent"
+                                    style={{}}
+                                    ref={function useMotionRef.useCallback}
+-                                   data-orchid-ref="ref-4mvjgh3zcn"
+                                  >
+                        ...
+                          <PopChild pop={false} isPresent={true} anchorX="left" anchorY="top" root={undefined}>
+                            <PopChildMeasure isPresent={true} childRef={{current:null}} sizeRef={{...}} pop={false}>
+                              <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} ...>
+                                <div
+                                  className="noise-overlay grid-bg min-h-screen"
+                                  style={{opacity:0}}
+                                  ref={function useMotionRef.useCallback}
+-                                 data-orchid-ref="ref-f7fx52qygi"
+                                >
+                                  <CursorGlow>
+                                    <div
+    ... [truncated]
+2026-02-09T12:10:26.821Z [console][error] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+2026-02-09T12:10:26.727Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+      <LoadingBoundary name="/" loading={null}>
+        <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+          <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+            <RedirectBoundary>
+              <RedirectErrorBoundary router={{...}}>
+                <InnerLayoutRouter url="/#skills" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                  <SegmentViewNode type="page" pagePath="/Desktop/t...">
+                    <SegmentTrieNode>
+                    <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                      <Home params={Promise} searchParams={Promise}>
+                        <ModeToggle is3D={false} onToggle={function onToggle}>
+                          <motion.button initial={{opacity:0, ...}} animate={{opacity:1,scale:1}} transition={{delay:1}} ...>
+                            <button
+                              onClick={function onToggle}
+                              className="fixed bottom-6 right-6 z-[60] flex items-center gap-2 px-4 py-2.5 rounded-ful..."
+                              style={{opacity:0,transfor...
+2026-02-09T12:10:26.727Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+      <LoadingBoundary name="/" loading={null}>
+        <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+          <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+            <RedirectBoundary>
+              <RedirectErrorBoundary router={{...}}>
+                <InnerLayoutRouter url="/#skills" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                  <SegmentViewNode type="page" pagePath="/Desktop/t...">
+                    <SegmentTrieNode>
+                    <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                      <Home params={Promise} searchParams={Promise}>
+                        <ModeToggle is3D={false} onToggle={function onToggle}>
+                          <motion.button initial={{opacity:0, ...}} animate={{opacity:1,scale:1}} transition={{delay:1}} ...>
+                            <button
+                              onClick={function onToggle}
+                              className="fixed bottom-6 right-6 z-[60] flex items-center gap-2 px-4 py-2.5 rounded-ful..."
+                              style={{opacity:0,transform:"scale(0.9)"}}
+                              ref={function useMotionRef.useCallback}
+-                             data-orchid-ref="ref-pn5ts60ii1"
+                            >
+                              <span
+                                className="text-xs text-white/50 group-hover:text-white/70 transition-colors"
+-                               data-orchid-ref="ref-99y57dsy9x"
+                              >
++                               3D World
+                              <div
+                                className="relative w-10 h-5 rounded-full bg-white/10 transition-colors"
+-                               data-orchid-ref="ref-xfzokjxpuy"
+                              >
+                                <motion.div animate={{x:0}} transition={{type:"spring", ...}} className="absolute t...">
+                                  <div
+                                    className="absolute top-0.5 left-0.5 w-4 h-4 rounded-full bg-accent"
+                                    style={{}}
+                                    ref={function useMotionRef.useCallback}
+-                                   data-orchid-ref="ref-4mvjgh3zcn"
+                                  >
+                        ...
+                          <PopChild pop={false} isPresent={true} anchorX="left" anchorY="top" root={undefined}>
+                            <PopChildMeasure isPresent={true} childRef={{current:null}} sizeRef={{...}} pop={false}>
+                              <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} ...>
+                                <div
+                                  className="noise-overlay grid-bg min-h-screen"
+                                  style={{opacity:0}}
+                                  ref={function useMotionRef.useCallback}
+-                                 data-orchid-ref="ref-f7fx52qygi"
+                                >
+                                  <CursorGlow>
+                                    <div
+    ... [truncated]
+2026-02-09T12:10:26.821Z [console][error] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+2026-02-09T12:14:22.687Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <InnerLayoutRouter url="/#skills" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+      <SegmentViewNode type="page" pagePath="/Desktop/t...">
+        <SegmentTrieNode>
+        <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+          <Home params={Promise} searchParams={Promise}>
+            <ModeToggle>
+            <AnimatePresence mode="wait">
+              <PresenceChild isPresent={true} initial={undefined} custom={undefined} presenceAffectsLayout={true} ...>
+                <PopChild pop={false} isPresent={true} anchorX="left" anchorY="top" root={undefined}>
+                  <PopChildMeasure isPresent={true} childRef={{current:null}} sizeRef={{...}} pop={false}>
+                    <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} ...>
+                      <div className="noise-over..." style={{opacity:0}} ref={function useMotionRef.useCallback}>
+                        <CursorGlow>
+                          <div
+                            className="cursor-glow hidden md:block"
+                            style={{left:-500,top:-500}}
+-                           data-orchid-ref="ref-xrworwxa4q"
+                          >
+                        <Navbar>
+                          <motion.nav initial={{y:-100}} animate={{y:0}} transition={{duration:0.6, ...}} ...>
+                            <nav
+                              className={"fixed top-0 left-0 right-0 z-50 transition-all duration-500 "}
+                              style={{transform:"translateY..."}}
+                              ref={function useMotionRef.useCallback}
+-                             data-orchid-ref="ref-sul1xmz582"
+                            >
+                              <div
+                                className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4"
+-                               data-orchid-ref="ref-lbwyqlfsqj"
+                              >
+                                <a
+                                  href="#"
+                                  className="text-xl font-bold tracking-tight"
+-                                 data-orchid-ref="ref-jhrjkw1ugv"
+                                >
+                                  <span
+                                    className="text-accent"
+-                                   data-orchid-ref="ref-ymfifn1fq7"
+                                  >
++                                   JR
+                                  <span
+                                    className="text-foreground/60"
+-                                   data-orchid-ref="ref-oy2u5xumdu"
+                                  >
++                                   .
+                                <div
+                                  className="hidden md:flex items-center gap-1"
+-                                 data-orchid-ref="ref-12122zx4ls"
+                                >
+                                  <a
+                                    href="#about"
+                                    className="relative px-4 py-2 text-sm font-medium transition-colors text-foregroun..."
+-                                   data-orchid-ref="ref-7q9t7u2eeh"
+                                  >
+                                    <span
+    ... [truncated]
+2026-02-09T12:14:22.696Z [console][error] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+2026-02-09T12:14:22.687Z [console][error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <InnerLayoutRouter url="/#skills" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+      <SegmentViewNode type="page" pagePath="/Desktop/t...">
+        <SegmentTrieNode>
+        <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+          <Home params={Promise} searchParams={Promise}>
+            <ModeToggle>
+            <AnimatePresence mode="wait">
+              <PresenceChild isPresent={true} initial={undefined} custom={undefined} presenceAffectsLayout={true} ...>
+                <PopChild pop={false} isPresent={true} anchorX="left" anchorY="top" root={undefined}>
+                  <PopChildMeasure isPresent={true} childRef={{current:null}} sizeRef={{...}} pop={false}>
+                    <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} ...>
+                      <div className="noise-over..." style={{opacity:0}} ref={function useMotionRef.useCallback}>
+                        <CursorGlow>
+                          <div
+                            className="cursor-glow hidden md:block"
+                            style={{left:-500,top:-500}}
+-                           data-orchid-ref="ref-xrworwxa4q"
+                          >
+                        <Navbar>
+                          <motion.nav initial={...
