@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { useState, useEffect, useRef, useCallback } from "react";
+import { motion, useScroll, useTransform, AnimatePresence, useMotionValue, useSpring } from "framer-motion";
 import { HiArrowUpRight, HiEnvelope, HiPhone } from "react-icons/hi2";
 import dynamic from "next/dynamic";
 
 const World = dynamic(() => import("@/components/world/World"), { ssr: false });
+const HeroScene = dynamic(() => import("@/components/HeroScene"), { ssr: false });
 import {
   SiAdobephotoshop,
   SiAdobeillustrator,
@@ -153,8 +154,9 @@ function CursorGlow() {
 function Hero() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const y = useTransform(scrollYProgress, [0, 1], [0, 200]);
-  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, 300]);
+  const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.6], [1, 0.9]);
 
   const roles = ["Graphic Designer", "UI Designer", "Web Developer"];
   const [roleIndex, setRoleIndex] = useState(0);
@@ -164,7 +166,6 @@ function Hero() {
   useEffect(() => {
     const current = roles[roleIndex];
     let timeout: NodeJS.Timeout;
-
     if (!deleting && text.length < current.length) {
       timeout = setTimeout(() => setText(current.slice(0, text.length + 1)), 80);
     } else if (!deleting && text.length === current.length) {
@@ -175,70 +176,117 @@ function Hero() {
       setDeleting(false);
       setRoleIndex((prev) => (prev + 1) % roles.length);
     }
-
     return () => clearTimeout(timeout);
   }, [text, deleting, roleIndex]);
 
+  /* Split-letter animation variants */
+  const nameLetters = "Rich".split("");
+  const letterVariants = {
+    hidden: { opacity: 0, y: 80, rotateX: -90 },
+    visible: (i: number) => ({
+      opacity: 1, y: 0, rotateX: 0,
+      transition: { delay: 0.4 + i * 0.08, duration: 0.8, ease: "easeOut" as const },
+    }),
+  };
+
   return (
     <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background orbs */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-purple-500/5 rounded-full blur-[120px]" />
+      {/* 3D Background Scene */}
+      <HeroScene />
+
+      {/* Aurora gradient overlay */}
+      <div className="absolute inset-0 aurora-bg opacity-50" />
+
+      {/* Animated gradient orbs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <motion.div
+          animate={{ x: [0, 30, -20, 0], y: [0, -40, 20, 0] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          className="absolute top-1/4 left-1/6 w-[600px] h-[600px] rounded-full morph-blob"
+          style={{ background: "radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%)" }}
+        />
+        <motion.div
+          animate={{ x: [0, -30, 20, 0], y: [0, 30, -40, 0] }}
+          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+          className="absolute bottom-1/4 right-1/6 w-[500px] h-[500px] rounded-full morph-blob"
+          style={{ background: "radial-gradient(circle, rgba(139,92,246,0.1) 0%, transparent 70%)" }}
+        />
+        <motion.div
+          animate={{ x: [0, 40, -10, 0], y: [0, -20, 30, 0] }}
+          transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
+          className="absolute top-1/3 right-1/3 w-[400px] h-[400px] rounded-full morph-blob"
+          style={{ background: "radial-gradient(circle, rgba(236,72,153,0.06) 0%, transparent 70%)" }}
+        />
       </div>
 
-      <motion.div style={{ y, opacity }} className="relative z-10 text-center px-6 max-w-4xl">
-        {/* Profile Photo */}
+      {/* Orbiting decorative elements */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="relative w-[300px] h-[300px] sm:w-[500px] sm:h-[500px]">
+          <div className="orbit-1 absolute w-2 h-2 bg-accent/40 rounded-full blur-[1px]" />
+          <div className="orbit-2 absolute w-1.5 h-1.5 bg-purple-400/30 rounded-full blur-[1px]" />
+          <div className="orbit-3 absolute w-1 h-1 bg-pink-400/30 rounded-full blur-[1px]" />
+        </div>
+      </div>
+
+      <motion.div style={{ y, opacity, scale }} className="relative z-10 text-center px-6 max-w-5xl">
+        {/* Profile Photo with enhanced glow */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.1, duration: 0.6 }}
-          className="mb-6"
+          initial={{ opacity: 0, scale: 0.5, y: 40 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ delay: 0.1, duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
+          className="mb-8"
         >
           <div className="relative inline-block">
-            {/* Glowing ring */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-accent via-purple-500 to-accent animate-spin-slow opacity-70 blur-sm" style={{ padding: '3px' }} />
-            <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-2 border-white/20 bg-surface">
-              <img
-                src="/profile.jfif"
-                alt="Rich"
-                className="w-full h-full object-cover"
-              />
+            <div className="absolute -inset-3 rounded-full bg-gradient-to-r from-accent via-purple-500 to-pink-500 animate-spin-slow opacity-50 blur-md" />
+            <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-accent via-purple-500 to-accent animate-spin-slow opacity-70 blur-sm" />
+            <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-2 border-white/20 bg-surface glow-pulse">
+              <img src="/profile.jfif" alt="Rich" className="w-full h-full object-cover" />
             </div>
-            {/* Status dot */}
             <div className="absolute bottom-2 right-2 w-4 h-4 bg-green-400 rounded-full border-2 border-[#050505]">
               <div className="absolute inset-0 bg-green-400 rounded-full animate-ping opacity-50" />
             </div>
           </div>
         </motion.div>
 
-        {/* Status badge */}
+        {/* Glassmorphism status badge */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent/20 bg-accent/5 mb-8"
+          initial={{ opacity: 0, y: 20, scale: 0.9 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ delay: 0.25 }}
+          className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full glass mb-10"
         >
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400" />
           </span>
-          <span className="text-xs font-medium text-foreground/70">Available for opportunities</span>
+          <span className="text-xs font-medium text-foreground/70 tracking-wide">Available for opportunities</span>
         </motion.div>
 
+        {/* Split-letter animated name */}
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
-          className="text-5xl sm:text-7xl md:text-8xl font-bold tracking-tight leading-[0.95]"
+          className="text-6xl sm:text-8xl md:text-9xl font-bold tracking-tighter leading-[0.9]"
+          style={{ perspective: "1000px" }}
         >
-          <span className="block text-foreground">Rich</span>
+          {nameLetters.map((letter, i) => (
+            <motion.span
+              key={i}
+              custom={i}
+              variants={letterVariants}
+              initial="hidden"
+              animate="visible"
+              className="inline-block gradient-text"
+              style={{ textShadow: "0 0 80px rgba(99,102,241,0.3)" }}
+            >
+              {letter}
+            </motion.span>
+          ))}
         </motion.h1>
 
+        {/* Typewriter role */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
+          transition={{ delay: 0.8 }}
           className="mt-8 text-xl sm:text-2xl font-mono text-foreground/40"
         >
           <span className="text-accent/60">{"< "}</span>
@@ -246,26 +294,29 @@ function Hero() {
           <span className="text-accent/60">{" />"}</span>
         </motion.div>
 
+        {/* Description */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7 }}
-          className="mt-6 text-foreground/40 max-w-lg mx-auto text-base leading-relaxed"
+          transition={{ delay: 1.0 }}
+          className="mt-6 text-foreground/40 max-w-lg mx-auto text-base sm:text-lg leading-relaxed"
         >
           Creating visually appealing and user-friendly digital solutions
           through design and code.
         </motion.p>
 
+        {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9 }}
+          transition={{ delay: 1.2 }}
           className="mt-10 flex items-center justify-center gap-4"
         >
           <a
             href="#projects"
-            className="group relative px-6 py-3 bg-accent text-white text-sm font-medium rounded-full overflow-hidden transition-all hover:shadow-[0_0_30px_rgba(99,102,241,0.3)]"
+            className="group relative px-7 py-3.5 bg-accent text-white text-sm font-medium rounded-full overflow-hidden transition-all hover:shadow-[0_0_40px_rgba(99,102,241,0.4)] hover:scale-105 active:scale-95"
           >
+            <div className="absolute inset-0 bg-gradient-to-r from-accent via-purple-500 to-accent bg-[length:200%_100%] animate-[aurora_4s_ease_infinite] opacity-0 group-hover:opacity-100 transition-opacity" />
             <span className="relative z-10 flex items-center gap-2">
               View Projects
               <HiArrowUpRight className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -273,7 +324,7 @@ function Hero() {
           </a>
           <a
             href="#contact"
-            className="px-6 py-3 text-foreground/60 text-sm font-medium rounded-full border border-white/10 hover:border-white/20 hover:text-foreground transition-all"
+            className="px-7 py-3.5 text-foreground/60 text-sm font-medium rounded-full border border-white/10 hover:border-accent/30 hover:text-foreground hover:bg-accent/5 transition-all hover:scale-105 active:scale-95"
           >
             Get in Touch
           </a>
@@ -283,21 +334,29 @@ function Hero() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
+          transition={{ delay: 2 }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2"
         >
           <motion.div
-            animate={{ y: [0, 8, 0] }}
+            animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-            className="w-5 h-8 rounded-full border border-white/20 flex justify-center pt-1.5"
+            className="flex flex-col items-center gap-2"
           >
-            <div className="w-1 h-2 bg-white/40 rounded-full" />
+            <span className="text-[10px] uppercase tracking-[0.3em] text-foreground/20">Scroll</span>
+            <div className="w-5 h-8 rounded-full border border-white/15 flex justify-center pt-1.5">
+              <motion.div
+                animate={{ y: [0, 8, 0], opacity: [1, 0.3, 1] }}
+                transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+                className="w-1 h-2 bg-accent/50 rounded-full"
+              />
+            </div>
           </motion.div>
         </motion.div>
       </motion.div>
     </section>
   );
 }
+
 
 /* ───────────────────── SKILLS MARQUEE ───────────────────── */
 function SkillsMarquee() {
@@ -331,14 +390,21 @@ function SkillsMarquee() {
 function SectionHeader({ label, title }: { label: string; title: string }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1] }}
       className="mb-16"
     >
       <span className="text-accent font-mono text-sm tracking-wider">{label}</span>
-      <h2 className="text-3xl sm:text-4xl font-bold mt-2 tracking-tight">{title}</h2>
-      <div className="w-12 h-[2px] bg-accent/50 mt-4" />
+      <h2 className="text-3xl sm:text-5xl font-bold mt-2 tracking-tight gradient-text">{title}</h2>
+      <motion.div
+        initial={{ width: 0 }}
+        whileInView={{ width: 48 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+        className="h-[2px] bg-gradient-to-r from-accent to-purple-500 mt-4"
+      />
     </motion.div>
   );
 }
@@ -412,10 +478,10 @@ function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15 }}
-                className="group p-6 rounded-2xl bg-surface border border-white/5 card-hover cursor-default"
+                className="group p-6 rounded-2xl glass holographic-shimmer card-hover cursor-default"
               >
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-accent/10 text-accent text-lg group-hover:bg-accent group-hover:text-white transition-colors">
+                  <div className="p-3 rounded-xl bg-accent/10 text-accent text-lg group-hover:bg-accent group-hover:text-white transition-all group-hover:shadow-[0_0_20px_rgba(99,102,241,0.3)]">
                     {item.icon}
                   </div>
                   <div>
@@ -743,7 +809,7 @@ function Education() {
                 }`}
             >
               {/* Dot */}
-              <div className="absolute left-0 md:left-1/2 w-3 h-3 bg-accent rounded-full transform -translate-x-[5px] md:-translate-x-1/2 mt-2 md:mt-0 z-10">
+              <div className="absolute left-0 md:left-1/2 w-3 h-3 bg-accent rounded-full transform -translate-x-[5px] md:-translate-x-1/2 mt-2 md:mt-0 z-10 timeline-dot-glow">
                 <div className="absolute inset-0 bg-accent rounded-full animate-ping opacity-20" />
               </div>
 
@@ -785,8 +851,8 @@ function Awards() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              whileHover={{ scale: 1.02 }}
-              className="group p-6 rounded-2xl bg-surface border border-white/5 hover:border-accent/20 transition-all cursor-default"
+              whileHover={{ scale: 1.03, y: -2 }}
+              className="group p-6 rounded-2xl glass holographic-shimmer hover:border-accent/20 transition-all cursor-default"
             >
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent font-mono text-sm font-bold shrink-0 group-hover:bg-accent group-hover:text-white transition-colors">
@@ -826,7 +892,7 @@ function Contact() {
             <div className="mt-8 space-y-4">
               <a
                 href="mailto:jhonworkplace1@gmail.com"
-                className="flex items-center gap-4 p-4 rounded-xl bg-surface border border-white/5 hover:border-accent/20 transition-all group"
+                className="flex items-center gap-4 p-4 rounded-xl glass hover:border-accent/20 transition-all group"
               >
                 <div className="p-3 rounded-lg bg-accent/10 text-accent group-hover:bg-accent group-hover:text-white transition-colors">
                   <HiEnvelope className="text-lg" />
@@ -839,7 +905,7 @@ function Contact() {
 
               <a
                 href="tel:09611618136"
-                className="flex items-center gap-4 p-4 rounded-xl bg-surface border border-white/5 hover:border-accent/20 transition-all group"
+                className="flex items-center gap-4 p-4 rounded-xl glass hover:border-accent/20 transition-all group"
               >
                 <div className="p-3 rounded-lg bg-accent/10 text-accent group-hover:bg-accent group-hover:text-white transition-colors">
                   <HiPhone className="text-lg" />
@@ -864,7 +930,7 @@ function Contact() {
               { label: "Nationality", value: "Filipino" },
               { label: "Specialization", value: "TVL - ICT" },
             ].map((item) => (
-              <div key={item.label} className="flex items-center justify-between p-4 rounded-xl bg-surface border border-white/5">
+              <div key={item.label} className="flex items-center justify-between p-4 rounded-xl glass hover:border-accent/10 transition-all">
                 <span className="text-xs text-foreground/30 uppercase tracking-wider">{item.label}</span>
                 <span className="text-sm text-foreground/70 font-medium">{item.value}</span>
               </div>
@@ -961,11 +1027,17 @@ export default function Home() {
             <Navbar />
             <Hero />
             <SkillsMarquee />
+            <div className="section-divider" />
             <About />
+            <div className="section-divider" />
             <Skills />
+            <div className="section-divider" />
             <Projects />
+            <div className="section-divider" />
             <Education />
+            <div className="section-divider" />
             <Awards />
+            <div className="section-divider" />
             <Contact />
             <Footer />
           </motion.div>
