@@ -138,7 +138,7 @@ function ProjectsPanel() {
     {
       title: "Travel and Tours",
       desc: "Comprehensive travel and tours website",
-      url: "https://travelandtourjhonrichdemo.vercel.app",
+      url: "https://traveltourjhonrichdemo.vercel.app",
       tags: ["Web App", "Travel"],
     },
     {
