@@ -21,7 +21,7 @@ import {
   SiVercel,
   SiTypescript,
 } from "react-icons/si";
-import { FaFigma, FaPaintBrush, FaLaptopCode } from "react-icons/fa";
+import { FaFigma, FaPaintBrush, FaLaptopCode, FaFacebook, FaInstagram, FaXTwitter, FaLinkedin } from "react-icons/fa";
 import { BsMicrosoft } from "react-icons/bs";
 
 /* ───────────────────── NAV ───────────────────── */
@@ -770,8 +770,13 @@ function Projects() {
                   <span className="font-mono text-sm" style={{ color: project.accentColor }}>0{i + 1}</span>
                   <div className="w-12 h-[1px]" style={{ backgroundColor: `${project.accentColor}40` }} />
                 </div>
-                <h3 className="text-3xl md:text-4xl font-bold mb-4 text-foreground group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r transition-all duration-300" style={{ backgroundImage: `linear-gradient(to right, ${project.accentColor}, #ffffff)` }}>
-                  {project.title}
+                <h3 className="text-3xl md:text-4xl font-bold mb-4 relative">
+                  <span className="text-foreground transition-opacity duration-300 group-hover:opacity-0">
+                    {project.title}
+                  </span>
+                  <span className="absolute left-0 top-0 text-transparent bg-clip-text transition-opacity duration-300 opacity-0 group-hover:opacity-100" style={{ backgroundImage: `linear-gradient(to right, ${project.accentColor}, #ffffff)` }}>
+                    {project.title}
+                  </span>
                 </h3>
                 <div className="p-6 rounded-2xl bg-surface/50 border border-white/5 backdrop-blur-sm mb-6 relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl pointer-events-none" />
@@ -965,6 +970,21 @@ function Contact() {
                   <div className="text-sm text-foreground/70 mt-0.5">0961 161 8136</div>
                 </div>
               </a>
+
+              <div className="flex items-center gap-4 pt-4">
+                <a href="https://www.facebook.com/ichJhon" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-accent/10 text-accent hover:bg-[#1877F2] hover:text-white transition-colors" aria-label="Facebook">
+                  <FaFacebook className="text-xl" />
+                </a>
+                <a href="https://www.instagram.com/ichbin.jhon/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-accent/10 text-accent hover:bg-[#E4405F] hover:text-white transition-colors" aria-label="Instagram">
+                  <FaInstagram className="text-xl" />
+                </a>
+                <a href="https://x.com/Spainiaaa" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-accent/10 text-accent hover:bg-black hover:text-white transition-colors" aria-label="X (Twitter)">
+                  <FaXTwitter className="text-xl" />
+                </a>
+                <a href="https://www.linkedin.com/in/jhon-rich-076201329/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-accent/10 text-accent hover:bg-[#0A66C2] hover:text-white transition-colors" aria-label="LinkedIn">
+                  <FaLinkedin className="text-xl" />
+                </a>
+              </div>
             </div>
           </motion.div>
 
