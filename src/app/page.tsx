@@ -624,7 +624,7 @@ function Projects() {
         title: "Travel and Tours",
         description:
           "A comprehensive travel and tours website offering seamless booking experiences and exploring beautiful destinations.",
-        url: "https://traveltourjhonrich.vercel.app",
+        url: "https://travelandtourjhonrichdemo.vercel.app",
         tags: ["Web App", "Travel", "UI/UX"],
         color: "from-blue-500/20 to-cyan-500/20",
         accentColor: "#06b6d4",
