@@ -130,6 +130,18 @@ function SkillsPanel() {
 function ProjectsPanel() {
   const projects = [
     {
+      title: "Project Tony Stark",
+      desc: "Innovative video demonstration of advanced concepts",
+      url: "/projecttonystark.mp4",
+      tags: ["Video", "Innovation"],
+    },
+    {
+      title: "Travel and Tours",
+      desc: "Comprehensive travel and tours website",
+      url: "https://traveltourjhonrich.vercel.app",
+      tags: ["Web App", "Travel"],
+    },
+    {
       title: "StudyFlow Learn",
       desc: "Interactive learning platform for students",
       url: "https://studyflowlearn.vercel.app",
