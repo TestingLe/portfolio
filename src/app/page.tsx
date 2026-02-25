@@ -361,15 +361,15 @@ function Hero() {
 /* ───────────────────── SKILLS MARQUEE ───────────────────── */
 function SkillsMarquee() {
   const skills = [
-    "GRAPHIC DESIGN",
+    "FULL STACK DEVELOPMENT",
     "UI/UX DESIGN",
-    "WEB DEVELOPMENT",
-    "ADOBE PHOTOSHOP",
-    "ILLUSTRATOR",
-    "CANVA",
-    "HTML/CSS",
-    "PYTHON",
+    "REACT & NEXT.JS",
+    "TAILWIND CSS",
+    "TYPESCRIPT",
     "FIGMA",
+    "ADOBE PHOTOSHOP",
+    "CANVA",
+    "PYTHON",
   ];
 
   return (
@@ -430,10 +430,10 @@ function About() {
             transition={{ duration: 0.7 }}
           >
             <p className="text-foreground/60 leading-relaxed text-lg">
-              I&apos;m a passionate student from the Philippines specializing in{" "}
+              I&apos;m a passionate Full Stack Developer from the Philippines specializing in{" "}
               <span className="text-foreground font-medium">Information and Communications Technology</span>.
-              My goal is to apply my skills in Graphic Design, UI Design, and coding to create
-              meaningful digital experiences.
+              My goal is to apply my skills in Web Development, UI/UX Design, and AI integration to create
+              meaningful and innovative digital experiences.
             </p>
             <p className="text-foreground/60 leading-relaxed text-lg mt-4">
               Currently studying at{" "}
@@ -468,9 +468,9 @@ function About() {
             className="space-y-4"
           >
             {[
-              { icon: <FaPaintBrush />, title: "Graphic Design", desc: "Adobe Photoshop, Illustrator, Canva, Lightroom" },
-              { icon: <FaFigma />, title: "UI Design", desc: "User-centered interfaces with modern aesthetics" },
-              { icon: <FaLaptopCode />, title: "Web Development", desc: "HTML, CSS, Python, modern web technologies" },
+              { icon: <FaLaptopCode />, title: "Full Stack Development", desc: "React, Next.js, TypeScript, Tailwind CSS" },
+              { icon: <FaFigma />, title: "UI/UX Design", desc: "User-centered interfaces with modern aesthetics" },
+              { icon: <FaPaintBrush />, title: "Creative Design", desc: "Video editing, Graphic Design, Innovation" },
             ].map((item, i) => (
               <motion.div
                 key={item.title}
@@ -502,25 +502,24 @@ function About() {
 function Skills() {
   const skillCategories = [
     {
-      title: "Design Tools",
+      title: "Frontend & Full Stack",
       skills: [
-        { name: "Adobe Photoshop", icon: <SiAdobephotoshop />, level: 85 },
-        { name: "Adobe Illustrator", icon: <SiAdobeillustrator />, level: 80 },
-        { name: "Adobe Lightroom", icon: <SiAdobelightroom />, level: 75 },
-        { name: "Canva", icon: <SiCanva />, level: 90 },
+        { name: "React", icon: <SiReact />, level: 90 },
+        { name: "Next.js", icon: <SiNextdotjs />, level: 85 },
+        { name: "TypeScript", icon: <SiTypescript />, level: 80 },
+        { name: "JavaScript", icon: <SiJavascript />, level: 85 },
+        { name: "Tailwind CSS", icon: <SiTailwindcss />, level: 90 },
+        { name: "HTML/CSS", icon: <SiHtml5 />, level: 95 },
       ],
     },
     {
-      title: "Development",
+      title: "Tools & Design",
       skills: [
-        { name: "React", icon: <SiReact />, level: 85 },
-        { name: "Next.js", icon: <SiNextdotjs />, level: 80 },
-        { name: "JavaScript", icon: <SiJavascript />, level: 85 },
-        { name: "TypeScript", icon: <SiTypescript />, level: 75 },
-        { name: "Tailwind CSS", icon: <SiTailwindcss />, level: 90 },
-        { name: "HTML/CSS", icon: <SiHtml5 />, level: 90 },
-        { name: "Python", icon: <SiPython />, level: 65 },
         { name: "Vercel", icon: <SiVercel />, level: 85 },
+        { name: "Figma", icon: <FaFigma />, level: 80 },
+        { name: "Adobe Photoshop", icon: <SiAdobephotoshop />, level: 85 },
+        { name: "Canva", icon: <SiCanva />, level: 90 },
+        { name: "Python", icon: <SiPython />, level: 70 },
       ],
     },
   ];
@@ -624,7 +623,7 @@ function Projects() {
         title: "Travel and Tours",
         description:
           "A comprehensive travel and tours website offering seamless booking experiences and exploring beautiful destinations.",
-        url: "https://travelandtourjhonrichdemo.vercel.app",
+        url: "https://traveltourjhonrichdemo.vercel.app",
         tags: ["Web App", "Travel", "UI/UX"],
         color: "from-blue-500/20 to-cyan-500/20",
         accentColor: "#06b6d4",

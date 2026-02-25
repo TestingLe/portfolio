@@ -38,10 +38,10 @@ function AboutPanel() {
   return (
     <div className="space-y-4">
       <p className="text-white/70 leading-relaxed">
-        I&apos;m a passionate student from the Philippines specializing in{" "}
+        I&apos;m a passionate Full Stack Developer from the Philippines specializing in{" "}
         <span className="text-white font-medium">Information and Communications Technology</span>.
-        My goal is to apply my skills in Graphic Design, UI Design, and coding to create
-        meaningful digital experiences.
+        My goal is to apply my skills in Web Development, UI/UX Design, and AI integration to create
+        meaningful and innovative digital experiences.
       </p>
       <p className="text-white/70 leading-relaxed">
         Currently studying at{" "}
@@ -68,20 +68,21 @@ function AboutPanel() {
 function SkillsPanel() {
   const categories = [
     {
-      title: "Design Tools",
+      title: "Frontend & Full Stack",
       skills: [
-        { name: "Adobe Photoshop", level: 85 },
-        { name: "Adobe Illustrator", level: 80 },
-        { name: "Canva", level: 90 },
-        { name: "Adobe Lightroom", level: 75 },
+        { name: "React / Next.js", level: 85 },
+        { name: "TypeScript / JS", level: 80 },
+        { name: "Tailwind CSS", level: 90 },
+        { name: "HTML/CSS", level: 95 },
       ],
     },
     {
-      title: "Development",
+      title: "Tools & Design",
       skills: [
-        { name: "HTML/CSS", level: 80 },
-        { name: "Python", level: 65 },
-        { name: "MS Office", level: 90 },
+        { name: "UI/UX Design", level: 85 },
+        { name: "Adobe Photoshop", level: 85 },
+        { name: "Canva", level: 90 },
+        { name: "Python", level: 70 },
       ],
     },
   ];
