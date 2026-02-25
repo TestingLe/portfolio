@@ -21,7 +21,7 @@ import {
   SiVercel,
   SiTypescript,
 } from "react-icons/si";
-import { FaFigma, FaPaintBrush, FaLaptopCode, FaFacebook, FaInstagram, FaXTwitter, FaLinkedin } from "react-icons/fa";
+import { FaFigma, FaPaintBrush, FaLaptopCode, FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { BsMicrosoft } from "react-icons/bs";
 
 /* ───────────────────── NAV ───────────────────── */
@@ -979,7 +979,7 @@ function Contact() {
                   <FaInstagram className="text-xl" />
                 </a>
                 <a href="https://x.com/Spainiaaa" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-accent/10 text-accent hover:bg-black hover:text-white transition-colors" aria-label="X (Twitter)">
-                  <FaXTwitter className="text-xl" />
+                  <FaTwitter className="text-xl" />
                 </a>
                 <a href="https://www.linkedin.com/in/jhon-rich-076201329/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-accent/10 text-accent hover:bg-[#0A66C2] hover:text-white transition-colors" aria-label="LinkedIn">
                   <FaLinkedin className="text-xl" />
