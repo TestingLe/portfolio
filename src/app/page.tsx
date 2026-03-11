@@ -631,7 +631,7 @@ function Projects() {
       {
         title: "Veloce",
         description:
-          "A fast, dynamic, and visually striking platform showcasing high-performance web experiences with modern animations.",
+          "A fast, dynamic, and visually striking platform showcasing sports car with modern animations.",
         url: "https://velocemadebyjhon.vercel.app/",
         tags: ["Web App", "Portfolio", "Animation"],
         color: "from-yellow-500/20 to-amber-500/20",
