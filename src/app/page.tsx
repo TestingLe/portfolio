@@ -629,6 +629,15 @@ function Projects() {
         accentColor: "#06b6d4",
       },
       {
+        title: "Veloce",
+        description:
+          "A fast, dynamic, and visually striking platform showcasing high-performance web experiences with modern animations.",
+        url: "https://velocemadebyjhon.vercel.app/",
+        tags: ["Web App", "Portfolio", "Animation"],
+        color: "from-yellow-500/20 to-amber-500/20",
+        accentColor: "#f59e0b",
+      },
+      {
         title: "StudyFlow Learn",
         description:
           "An interactive learning platform designed to help students organize and optimize their study sessions with smart tools and resources.",
