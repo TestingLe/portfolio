@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, useScroll, useTransform, AnimatePresence, useMotionValue, useSpring } from "framer-motion";
-import { HiArrowUpRight, HiEnvelope, HiPhone } from "react-icons/hi2";
+import { HiArrowUpRight, HiEnvelope, HiPhone, HiDocumentArrowDown } from "react-icons/hi2";
 import dynamic from "next/dynamic";
 
 const World = dynamic(() => import("@/components/world/World"), { ssr: false });
@@ -87,6 +87,15 @@ function Navbar() {
               <span className="relative z-10">{item}</span>
             </a>
           ))}
+          <a
+            href="/resume.docx"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-2 px-5 py-2 text-sm font-medium rounded-full bg-accent text-white flex items-center gap-2 hover:shadow-[0_0_20px_rgba(99,102,241,0.4)] hover:scale-105 active:scale-95 transition-all"
+          >
+            <HiDocumentArrowDown className="text-base" />
+            Resume
+          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -129,6 +138,16 @@ function Navbar() {
                   {item}
                 </a>
               ))}
+              <a
+                href="/resume.docx"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMenuOpen(false)}
+                className="mt-2 px-5 py-2.5 text-sm font-medium rounded-full bg-accent text-white flex items-center justify-center gap-2 hover:shadow-[0_0_20px_rgba(99,102,241,0.4)] transition-all w-fit"
+              >
+                <HiDocumentArrowDown className="text-base" />
+                Resume
+              </a>
             </div>
           </motion.div>
         )}
